@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+  color: white;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: black;
+}
+
+.flex-frame {
+  background-color: #28242c;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 2%;
+  padding: 2%;
+}
+
+img {
+  float: left;
+  padding-right: 5%;
+  width: 40%;
+}
+
+/* .episode.list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 5%;
+}
+
+.episode-box {
+  width: 90%;
+  margin-left: 5%;
+} */
