@@ -1,3 +1,5 @@
+/* https://unsplash.com/photos/cVI8ViAhU04 */
+
 * {
   box-sizing: border-box;
   color: white;
@@ -6,30 +8,49 @@
 
 body {
   background-color: black;
+  background-image: url(images/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.flex-frame {
+.box-container {
   background-color: #28242c;
   width: 80%;
   margin-left: 10%;
   margin-top: 2%;
   padding: 2%;
+  display: inline-block;
 }
 
 img {
   float: left;
   padding-right: 5%;
-  width: 40%;
+  width: 30%;
 }
 
-/* .episode.list {
+.episode-list {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: 5%;
 }
 
-.episode-box {
-  width: 90%;
-  margin-left: 5%;
-} */
+.episode-box img {
+  width: 15%;
+}
+
+.playbar {
+  width: 100%;
+  background-color: #28242c;
+  /* display: inline-block; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.playbar img {
+  width: 10%;
+  align-items: center;
+}
