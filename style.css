@@ -1,0 +1,72 @@
+/* Bakgrundsbilden vi har använt: https://unsplash.com/photos/cVI8ViAhU04 */
+/* Bilden till avsnitt #1: https://unsplash.com/photos/k1xf2D7jWUs */
+
+/* Allmän anpassning (primärt för text) */
+* {
+  box-sizing: border-box;
+  color: white;
+  font-family: sans-serif;
+}
+
+/* Bakgrunden */
+body {
+  background-image: url(images/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Standard för alla rutor */
+.box-container {
+  background-color: #28242c;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 2%;
+  padding: 2%;
+  display: inline-block;
+}
+
+/* Standard för alla bilder */
+img {
+  float: left;
+  padding-right: 5%;
+  width: 30%;
+}
+
+/* Listan med avsnitt */
+.episode-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+/* Bilderna till avsnitten */
+.episode-box img {
+  width: 20%;
+  padding-right: 2%;
+}
+
+/* Passande färg för uppspelarna */
+audio::-webkit-media-controls-panel {
+  background-color: #b8b4b4;
+}
+
+/* Passande storlek för uppspelarna */
+audio {
+  width: 40%;
+}
+
+/* Anpassningar till mobila enheter */
+@media (max-width: 800px) {
+  audio {
+    width: 100%;
+  }
+  .box-container h1 {
+    text-align: center;
+  }
+  img {
+    width: 100%;
+  }
+  .episode-box img {
+    width: 40%;
+  }
+}
