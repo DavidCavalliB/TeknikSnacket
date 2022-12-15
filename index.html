@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TeknikSnacket</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/png" href="images/TS-logotype.png" />
   </head>
   <body>
+    <!-- Hela övre menyn -->
+    <div class="top-bar" id="top-bar">
+      <!-- Alla länkar -->
+      <nav>
+        <!-- Länk till kontaktrutan -->
+        <a href="#footer">Kontaktinformation</a>
+        <!-- Länk till avsnittsrutan -->
+        <a href="#episode-list">Avsnitt</a>
+        <!-- Länk till informationssidan -->
+        <a href="#">Om oss</a>
+      </nav>
+    </div>
     <!-- Poddens informationsruta -->
-    <div class="box-container">
+    <div class="box-container top-container">
       <!-- Poddens bild -->
-      <img src="images/TS-logotype.png" alt="Poddens bild">
+      <img src="images/TS-logotype.png" alt="Poddens bild" />
       <!-- Poddens namn -->
       <h1>TeknikSnacket</h1>
       <!-- Information om podden -->
       <p>
-        Den här podden handlar om teknik i samhället idag. I varje avsnitt
-         så ställer programledaren Sigge ett antal frågor till expertpanelen 
-         som sedan diskuteras. Ämnet byts varje avsnitt och handlar för det mesta 
-         om mjukvara men ibland så diskuteras också hårdvara. Varje avsnitt är 
-         cirka 15 minuter lång och ett nytt avsnitt släpps i början av varje månad. 
+        Den här podden handlar om teknik i samhället idag. I varje avsnitt så
+        ställer programledaren Sigge ett antal frågor till expertpanelen som
+        sedan diskuteras. Ämnet byts varje avsnitt och handlar för det mesta om
+        mjukvara men ibland så diskuteras också hårdvara. Varje avsnitt är cirka
+        15 minuter lång och ett nytt avsnitt släpps i början av varje månad.
       </p>
       <!-- Lista på medverkande -->
       <p>
-        Medverkande: <br>
-        Emil Winroth, David Cavalli-Björkman, Sigge Lind och Johannes Larsson Lewin.
+        Medverkande: <br />
+        Emil Winroth, David Cavalli-Björkman, Sigge Lind och Johannes Larsson
+        Lewin.
       </p>
     </div>
     <!-- Lista med avsnitt -->
-    <div class="episode-list">
+    <div class="episode-list" id="episode-list">
       <!-- Ruta om avsnitt #1 -->
       <div class="box-container episode-box">
         <!-- Bild till avsnitt #1 -->
-        <img src="images/episode-one-icon.jpg" alt="Avsnittets bild">
+        <img src="images/episode-one-icon.jpg" alt="Avsnittets bild" />
         <!-- Namn på avsnitt #1 -->
         <h3>Avsnitt 1: Twitter</h3>
         <!-- Information om avsnitt #1 -->
         <p>
-          I det här avsnittet så ställer Sigge frågor om Twitter och dess historia. 
-          Twitter är en stor plattform som har över 200 milljoner aktiva användare.
-          Hur har plattformen påverkat samhället? Hur fungerar deras algoritmer? Och hur 
-          har bytet av ägare förändrat företaget?
+          I det här avsnittet så ställer Sigge frågor om Twitter och dess
+          historia. Twitter är en stor plattform som har över 200 milljoner
+          aktiva användare. Hur har plattformen påverkat samhället? Hur fungerar
+          deras algoritmer? Och hur har bytet av ägare förändrat företaget?
         </p>
         <!-- Ljudfil för avsnitt #1 -->
         <audio controls src="audio/podcastEpisodeOne.mp4">
@@ -51,12 +65,13 @@
       <!-- Ruta om avsnitt #2 -->
       <div class="box-container episode-box">
         <!-- Bild till avsnitt #2 -->
-        <img src="images/episode-two-icon.jpg" alt="Avsnittets bild">
+        <img src="images/episode-two-icon.jpg" alt="Avsnittets bild" />
         <!-- Namn på avsnitt #2 -->
         <h3>Avsnitt 2: Youtube</h3>
         <!-- Information om avsnitt #2 -->
         <p>
-          Detta avsnitt har inte släppts än, mer information kommer när det släpps. 
+          Detta avsnitt har inte släppts än, mer information kommer när det
+          släpps.
         </p>
         <!-- Ljudfil för avsnitt #2 -->
         <audio controls src="#">
@@ -64,5 +79,39 @@
         </audio>
       </div>
     </div>
+    <!-- Kontaktruta -->
+    <footer id="footer">
+      <ul>
+        <!-- Titel till kontaktrutan -->
+        <li><h2>TeknikSnacket</h2></li>
+        <!-- Titeln till länk till mejl -->
+        <li><strong>Kontakta oss:</strong></li>
+        <!-- Länk till mejl -->
+        <li>
+          <a href="mailto:tekniksnacket@gmail.com">tekniksnacket@gmail.com</a>
+        </li>
+        <br />
+        <!-- Titel till länken till informationssidan -->
+        <li><strong>Vill du veta mer om oss?</strong></li>
+        <!-- Länk till informationssidan -->
+        <li>
+          <a href="#">Använd denna länk</a>
+        </li>
+      </ul>
+    </footer>
   </body>
+  <!-- Gör så att den övre menyn försvinner när man går ner på sidan
+        och kommer tillbaka när man börjar gå upp. -->
+  <script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+      var currentScrollPos = window.pageYOffset;
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("top-bar").style.top = "0";
+      } else {
+        document.getElementById("top-bar").style.top = "-60px";
+      }
+      prevScrollpos = currentScrollPos;
+    };
+  </script>
 </html>

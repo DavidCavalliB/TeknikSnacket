@@ -2,6 +2,10 @@
 /* Bilden till avsnitt #1: https://unsplash.com/photos/k1xf2D7jWUs */
 /* Bilden till avsnitt #2: https://unsplash.com/photos/niUkImZcSP8 */
 
+/* --------------------------- */
+/* Generellt för hela hemsidan */
+/* --------------------------- */
+
 /* Allmän anpassning (primärt för text) */
 * {
   box-sizing: border-box;
@@ -33,6 +37,49 @@ img {
   width: 30%;
 }
 
+/* --------------------------- */
+/* Övre menyn och dess inehåll */
+/* --------------------------- */
+
+.top-bar {
+  position: fixed;
+  background-color: #28242c;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  transition: 0.3s;
+}
+
+.top-bar nav {
+  display: flex;
+  flex-direction: row;
+  float: right;
+}
+
+.top-bar a {
+  display: block;
+  text-decoration: none;
+  background-color: #201c1c;
+  padding: 20px 30px;
+  margin-right: 20px;
+}
+
+.top-bar a:hover {
+  background-color: #383434;
+}
+
+/* ------------------------------- */
+/* Specifikt för den översta rutan */
+/* ------------------------------- */
+
+.top-container {
+  margin-top: 70px;
+}
+
+/* ------------------------------------ */
+/* Listan med avsnitt och dess innehåll */
+/* ------------------------------------ */
+
 /* Listan med avsnitt */
 .episode-list {
   display: flex;
@@ -56,8 +103,48 @@ audio {
   width: 40%;
 }
 
+/* ------------------------------ */
+/* Kontaktrutan och dess innehåll */
+/* ------------------------------ */
+
+/* Kontaktruta */
+footer {
+  display: flex;
+  position: static;
+  background-color: #28242c;
+  margin: 0%;
+  justify-content: center;
+  align-items: center;
+  margin: 2% -0.7% -0.7% -0.7%;
+}
+
+/* Inehåll i kontaktruta */
+footer ul {
+  list-style-type: none;
+  padding: 0% 0% 2% 0%;
+  text-align: center;
+}
+
+/* --------------------------------------------------------- */
+/* Färger till länkarna som passar bättre med hemsidans tema */
+/* --------------------------------------------------------- */
+
+/* Standradfärg */
+footer a {
+  color: cornflowerblue;
+}
+
+/* Färg efter använding */
+footer :visited {
+  color: magenta;
+}
+
+/* ---------------------------- */
+/* Anpassning till skärmstorlek */
+/* ---------------------------- */
+
 /* Anpassningar till mobila enheter */
-@media (max-width: 800px) {
+@media (max-width: 500px) {
   audio {
     width: 100%;
   }
@@ -72,5 +159,9 @@ audio {
 
   .episode-box img {
     width: 40%;
+  }
+
+  .top-bar {
+    visibility: hidden;
   }
 }
