@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,7 +18,7 @@
         <!-- Länk till avsnittsrutan -->
         <a href="#episode-list">Avsnitt</a>
         <!-- Länk till informationssidan -->
-        <a href="#">Om oss</a>
+        <a href="about.html">Om oss</a>
       </nav>
     </div>
     <!-- Poddens informationsruta -->
@@ -38,7 +38,7 @@
       <!-- Lista på medverkande -->
       <p>
         Medverkande: <br />
-        Emil Winroth, David Cavalli-Björkman, Sigge Lind och Johannes Larsson
+        Sigge Lind, David Cavalli-Björkman, Emil Winroth och Johannes Larsson
         Lewin.
       </p>
     </div>
@@ -58,7 +58,7 @@
           deras algoritmer? Och hur har bytet av ägare förändrat företaget?
         </p>
         <!-- Ljudfil för avsnitt #1 -->
-        <audio controls src="audio/podcastEpisodeOne.mp4">
+        <audio controls src="audio/podcast-episode-one.mp4">
           Denna webbläsare stödjer inte mp4-format.
         </audio>
       </div>
@@ -90,28 +90,29 @@
         <li>
           <a href="mailto:tekniksnacket@gmail.com">tekniksnacket@gmail.com</a>
         </li>
-        <br />
+        <!-- Separering mellan innehåll -->
+        <li>------------------------------------</li>
         <!-- Titel till länken till informationssidan -->
         <li><strong>Vill du veta mer om oss?</strong></li>
         <!-- Länk till informationssidan -->
         <li>
-          <a href="#">Använd denna länk</a>
+          <a href="about.html">Använd denna länk</a>
         </li>
       </ul>
     </footer>
-  </body>
-  <!-- Gör så att den övre menyn försvinner när man går ner på sidan
+    <!-- Gör så att den övre menyn försvinner när man går ner på sidan
         och kommer tillbaka när man börjar gå upp. -->
-  <script>
-    var prevScrollpos = window.pageYOffset;
-    window.onscroll = function () {
-      var currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.getElementById("top-bar").style.top = "0";
-      } else {
-        document.getElementById("top-bar").style.top = "-60px";
-      }
-      prevScrollpos = currentScrollPos;
-    };
-  </script>
+    <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("top-bar").style.top = "0";
+        } else {
+          document.getElementById("top-bar").style.top = "-60px";
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    </script>
+  </body>
 </html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeknikSnacket About Us</title>
+    <link rel="stylesheet" href="about-style.css" />
+    <link rel="icon" type="image/png" href="images/TS-logotype.png" />
+  </head>
+  <body>
+    <!-- Hela övre menyn -->
+    <div class="top-bar" id="top-bar">
+      <!-- Alla länkar -->
+      <nav>
+        <!-- Länk till kontaktrutan -->
+        <a href="#footer">Kontaktinformation</a>
+        <!-- Länk till avsnittsrutan -->
+        <a href="#members-list">Oss</a>
+        <!-- Länk till informationssidan -->
+        <a href="index.html">Podden</a>
+      </nav>
+    </div>
+    <!-- Rubrik -->
+    <div class="flex-frame header top-container">
+      <h1>Om oss</h1>
+    </div>
+    <!-- Informationsruta -->
+    <div class="flex-frame">
+      På denna sida kan du läsa om oss som medverkar i podden. Du kan få veta
+      både om våra arbetserfarenher och om våra hobbyer.
+    </div>
+    <!-- Lista med personer -->
+    <div class="flex-list" id="members-list">
+      <!-- Person #1 -->
+      <div class="flex-frame flex-container">
+        <!-- Namn på person #1 -->
+        <h2 class="header">Sigge Lind</h2>
+        <p>
+          <!-- Bild på person #1 -->
+          <img src="images/person-1.jpg" alt="Bild på Sigge Lind" />
+          <!-- Information om person #1 -->
+          Programmledaren. Har varit programmleader för många poddar så som
+          "Snackar Bäst Som Snackar Sist" och "Flödet". Han tycker om att bowla
+          och styrketränar regelbundet.
+        </p>
+      </div>
+      <!-- Person #2 -->
+      <div class="flex-frame flex-container">
+        <!-- Namn på person #2 -->
+        <h2 class="header">David Cavalli-Björkman</h2>
+        <p>
+          <!-- Bild på person #2 -->
+          <img src="images/person-2.jpg" alt="Bild på David Cavalli-Björkman" />
+          <!-- Information om person #2 -->
+          Sociologen. Har varit med och organiserat ett stort antal nationella
+          och internationella undersökningar. Några exempel är "Sociala Medier I
+          Samhället" och "Internet Usage In The EU". Löpning och yoga är två av
+          hans huvudintressen.
+        </p>
+      </div>
+      <!-- Person #3 -->
+      <div class="flex-frame flex-container">
+        <!-- Namn på person #3 -->
+        <h2 class="header">Emil Winroth</h2>
+        <p>
+          <!-- Bild på person #3 -->
+          <img src="images/person-3.jpg" alt="Bild på Emil Winroth" />
+          <!-- Information om person #3 -->
+          Expert på människo-dator interaktion och författare. Har skrivit många
+          böcker om människo-dator interaktion och hur det har förändrats med
+          utvecklingen. Han spelar datorspel och bordsrollspel på fritiden.
+        </p>
+      </div>
+      <div class="flex-frame flex-container">
+        <!-- Namn på person #4 -->
+        <h2 class="header">Johannes Larsson Lewin</h2>
+        <p>
+          <!-- Bild på pperson #4 -->
+          <img src="images/person-4.jpg" alt="Bild på Johannes Larsson Lewin" />
+          <!-- Information om person #4 -->
+          Porgrammerings experten. Har jobbat som programmerare under de senaste
+          tjugo åren och har under en viss tid jobbat för ett antal stora
+          företag, så som Microsoft och Sony. Han läser gärna böcker och målar
+          på fritiden.
+        </p>
+      </div>
+    </div>
+    <!-- Kontaktruta -->
+    <footer id="footer">
+      <ul>
+        <!-- Titel till kontaktrutan -->
+        <li><h2>TeknikSnacket</h2></li>
+        <!-- Titeln till länk till mejl -->
+        <li><strong>Kontakta oss:</strong></li>
+        <!-- Länk till mejl -->
+        <li>
+          <a href="mailto:tekniksnacket@gmail.com">tekniksnacket@gmail.com</a>
+        </li>
+        <!-- Separering mellan innehåll -->
+        <li>------------------------------------</li>
+        <!-- Titel till länken till informationssidan -->
+        <li><strong>Vill du veta mer om oss?</strong></li>
+        <!-- Länk till informationssidan -->
+        <li>
+          <a href="about.html">Använd denna länk</a>
+        </li>
+      </ul>
+    </footer>
+    <!-- Gör så att den övre menyn försvinner när man går ner på sidan
+        och kommer tillbaka när man börjar gå upp. -->
+    <script>
+      var prevScrollpos = window.pageYOffset;
+      window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+          document.getElementById("top-bar").style.top = "0";
+        } else {
+          document.getElementById("top-bar").style.top = "-60px";
+        }
+        prevScrollpos = currentScrollPos;
+      };
+    </script>
+  </body>
+</html>

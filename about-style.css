@@ -1,6 +1,8 @@
-/* Bakgrundsbilden: https://unsplash.com/photos/cVI8ViAhU04 */
-/* Bilden till avsnitt #1: https://unsplash.com/photos/k1xf2D7jWUs */
-/* Bilden till avsnitt #2: https://unsplash.com/photos/niUkImZcSP8 */
+/* Bakgrundsbilden: https://unsplash.com/photos/Lks7vei-eAg */
+/* Bildexempel på person #1: https://unsplash.com/photos/FN_6Zd81XMg */
+/* Bildexempel på person #2: https://unsplash.com/photos/z7EJoGtNHDg */
+/* Bildexempel på person #3: https://unsplash.com/photos/n2AwphOvMq8 */
+/* Bildexempel på person #4: https://unsplash.com/photos/Deg_jGchsuA */
 
 /* --------------------------- */
 /* Generellt för hela hemsidan */
@@ -15,27 +17,21 @@
 
 /* Bakgrunden */
 body {
-  background-image: url(images/background.jpg);
+  background-image: url(images/background-about.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
 
-/* Standard för alla rutor */
-.box-container {
+/* Allmän design */
+.flex-frame {
+  display: flex;
   background-color: #28242c;
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 2%;
-  padding: 2%;
-  display: inline-block;
+  width: 35%;
   border-radius: 20px;
-}
-
-/* Standard för alla bilder */
-img {
-  float: left;
-  padding-right: 5%;
-  width: 30%;
+  padding: 1%;
+  margin-left: 32.5%;
+  margin-top: 2%;
+  align-items: center;
 }
 
 /* --------------------------- */
@@ -74,34 +70,42 @@ img {
 /* ------------------------------- */
 
 .top-container {
-  margin-top: 70px;
+  margin-top: 75px;
+  width: 20%;
+  margin-left: 40%;
 }
 
-/* ------------------------------------ */
-/* Listan med avsnitt och dess innehåll */
-/* ------------------------------------ */
+/* -------- */
+/* Rubriker */
+/* -------- */
 
-/* Listan med avsnitt */
-.episode-list {
+.header {
+  justify-content: center;
+  text-align: center;
+}
+
+/* ----------------------------- */
+/* Personlistan och dess inehåll */
+/* ----------------------------- */
+
+/* Lista med personer */
+.flex-list {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+}
+
+/* Personrutor */
+.flex-container {
+  margin-left: 9.8%;
   flex-direction: column;
 }
 
-/* Bilderna till avsnitten */
-.episode-box img {
-  width: 20%;
-  padding-right: 2%;
-}
-
-/* Passande färg för uppspelarna */
-audio::-webkit-media-controls-panel {
-  background-color: #b8b4b4;
-}
-
-/* Passande storlek för uppspelarna */
-audio {
+/* Bilder */
+img {
   width: 40%;
+  float: left;
+  padding-right: 20px;
 }
 
 /* ------------------------------ */
@@ -144,25 +148,25 @@ footer :visited {
 /* Anpassning till skärmstorlek */
 /* ---------------------------- */
 
-/* Anpassningar till mobila enheter */
+@media (max-width: 700px) {
+  .top-container {
+    width: 35%;
+    margin-left: 32.5%;
+  }
+}
+
 @media (max-width: 500px) {
-  audio {
-    width: 100%;
-  }
-
-  .box-container h1 {
-    text-align: center;
-  }
-
-  img {
-    width: 100%;
-  }
-
-  .episode-box img {
-    width: 40%;
-  }
-
   .top-bar {
     visibility: hidden;
+  }
+
+  .flex-frame {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 4%;
+  }
+
+  .flex-container {
+    flex-direction: column;
   }
 }
