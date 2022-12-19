@@ -75,6 +75,10 @@ img {
 
 .top-container {
   margin-top: 70px;
+  width: 20%;
+  margin-left: 40%;
+  justify-content: center;
+  text-align: center;
 }
 
 /* ------------------------------------ */
@@ -116,7 +120,7 @@ footer {
   margin: 0%;
   justify-content: center;
   align-items: center;
-  margin: 2% -0.6% -0.6% -0.6%;
+  margin: 2% -0.5% -0.5% -0.5%;
 }
 
 /* Inehåll i kontaktruta */
@@ -144,8 +148,20 @@ footer :visited {
 /* Anpassning till skärmstorlek */
 /* ---------------------------- */
 
-/* Anpassningar till mobila enheter */
+
+@media (max-width: 700px) {
+  .top-container {
+    width: 35%;
+    margin-left: 32.5%;
+  }
+}
+
 @media (max-width: 500px) {
+.top-bar a {
+    padding: 20px 15px;
+    margin-right: 10px;
+  }
+
   audio {
     width: 100%;
   }
@@ -160,9 +176,5 @@ footer :visited {
 
   .episode-box img {
     width: 40%;
-  }
-
-  .top-bar {
-    visibility: hidden;
   }
 }
