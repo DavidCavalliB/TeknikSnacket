@@ -63,10 +63,12 @@ img {
   background-color: #201c1c;
   padding: 20px 30px;
   margin-right: 20px;
+  transition: 0.3s ease;
 }
 
 .top-bar a:hover {
   background-color: #383434;
+  transition: 0.3s ease;
 }
 
 /* ------------------------------- */
