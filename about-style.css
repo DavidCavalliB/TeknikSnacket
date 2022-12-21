@@ -153,6 +153,10 @@ footer :visited {
     width: 35%;
     margin-left: 32.5%;
   }
+
+  .flex-frame {
+    padding: 3%;
+  }
 }
 
 @media (max-width: 500px) {
