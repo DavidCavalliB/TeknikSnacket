@@ -139,11 +139,17 @@ footer ul {
 /* Standradfärg */
 footer a {
   color: cornflowerblue;
+  transition: 0.5s ease;
+}
+
+footer a:hover {
+  color: rgb(157, 183, 232);
+  transition: 0.5s ease;
 }
 
 /* Färg efter använding */
 footer :visited {
-  color: magenta;
+  color: rgb(231, 114, 231);
 }
 
 /* ---------------------------- */
