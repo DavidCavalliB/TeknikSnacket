@@ -12,9 +12,21 @@
     <!-- Hela övre menyn -->
     <div class="top-bar" id="top-bar">
       <!-- Alla länkar -->
+      <!-- Länklista för större skärmar -->
       <nav>
+        <!-- Länk till avsnittsrutan -->
+        <a href="#members-list">Oss</a>
+        <!-- Länk till informationssidan -->
+        <a href="index.html">Hem</a>
+        <!-- Länk till informationssidan -->
+        <a href="about.html">Om oss</a>
+        <!-- Länk till kontaktrutan -->
+        <a href="#footer">Kontakt</a>
+      </nav>
+      <!-- Länk dropdown för mindre skärmar -->
+      <div class="top-dropdown">
         <!-- Menyknappen -->
-        <button>Länkar</button>
+        <img src="images/menyikon.svg" alt="">
         <!-- Länkmenyn -->
         <div class="top-links">
           <!-- Länk till informationssidan -->
@@ -26,7 +38,7 @@
           <!-- Länk till kontaktrutan -->
           <a href="#footer">Kontakt</a>
         </div>
-      </nav>
+      </div>
     </div>
     <!-- Rubrik -->
     <div class="box-container top-container">
@@ -118,7 +130,7 @@
       window.onscroll = function () {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos < currentScrollPos && currentScrollPos > 0) {
-          document.getElementById("top-bar").style.top = "-60px";
+          document.getElementById("top-bar").style.top = "-300px";
         } else {
           document.getElementById("top-bar").style.top = "0px";
         }
